@@ -1,0 +1,111 @@
+/* ===== GOOGLE FONTS ===== */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* ===== RESET ===== */
+
+*
+{
+    box-sizing: border-box;
+}
+
+body 
+{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container 
+{
+    width: 300px;
+}
+
+.steps 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.circle 
+{
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    transition: border .3s ease .25s;
+}
+
+.circle.active 
+{
+    border-color: slateblue;
+}
+
+#line 
+{
+    height: 3px;
+    background: #ccc;
+    width: 100%;
+    position: absolute;
+    z-index: -2;
+}
+
+#line-fill
+{
+    height: 3px;
+    background: slateblue;
+    width: 0%;
+    position: absolute;
+    z-index: -1;
+    transition: width .3s linear;
+}
+
+.btns 
+{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.btns button 
+{
+    background: slateblue;
+    padding: 7px 18px;
+    font-size: 15px;
+    border: 0;
+    color: #fff;
+    border-radius: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.btns button:disabled
+{
+    cursor: not-allowed;
+    background: #aaa;
+}
+
+.btns button:hover 
+{
+    transform: scale(.99);
+}
+
+
+.btns button:disabled:hover 
+{
+    transform: none;
+}
+
+
+
